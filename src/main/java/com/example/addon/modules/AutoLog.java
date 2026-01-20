@@ -108,7 +108,7 @@ public class AutoLog extends Module {
         .build()
     );
 
-    private final Setting<Set<EntityType<?>>> trackedEntities = sgEntities.add(new EntityTypeListSetting.Builder()
+    private final Setting<List<EntityType<?>>> trackedEntities = sgEntities.add(new EntityTypeListSetting.Builder()
         .name("tracked-entities")
         .description("Entity types to count as dangerous.")
         .defaultValue(EntityType.PLAYER)
