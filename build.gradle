@@ -4,14 +4,10 @@ buildscript {
             name = 'Fabric'
             url = 'https://maven.fabricmc.net/'
         }
-        maven {
-            name = 'Fabric Snapshots'
-            url = 'https://maven.fabricmc.net/snapshots'
-        }
         gradlePluginPortal()
     }
     dependencies {
-        classpath 'net.fabricmc:fabric-loom:1.7-SNAPSHOT'
+        classpath 'net.fabricmc:fabric-loom:1.0.7'
     }
 }
 
