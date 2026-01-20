@@ -1,7 +1,22 @@
-plugins {
-    id "fabric-loom" version "1.9-SNAPSHOT"
-    id "maven-publish"
+buildscript {
+    repositories {
+        maven {
+            name = 'Fabric'
+            url = 'https://maven.fabricmc.net/'
+        }
+        maven {
+            name = 'Fabric Snapshots'
+            url = 'https://maven.fabricmc.net/snapshots'
+        }
+        gradlePluginPortal()
+    }
+    dependencies {
+        classpath 'net.fabricmc:fabric-loom:1.7-SNAPSHOT'
+    }
 }
+
+apply plugin: 'fabric-loom'
+apply plugin: 'maven-publish'
 
 version = project.mod_version
 group = project.maven_group
